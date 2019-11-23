@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  db:
+    image: "mysql:5.7.18"
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpwdabc
+      - MYSQL_DATABASE=devel
+      - MYSQL_USER=devel
+      - MYSQL_PASSWORD=123456
+    command: ['--character-set-server=utf8mb4','--collation-server=utf8mb4_unicode_ci', '--transaction-isolation=READ-COMMITTED']
+    volumes:
+      - type: bind
+        source: ./misc/db
+        target: /docker-entrypoint-initdb.d
+        volume:
+          readonly: true
