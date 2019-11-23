@@ -5,6 +5,9 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
+def importPath = project.hasProperty('IMPORT_BASE_PATH') ? project['IMPORT_BASE_PATH']
+    : 'https://raw.githubusercontent.com/easyweb4j/gradle-gallery/master/'
+
 ext {
-  importBasePath = '/home/work/project/ray/gradle-gallery'
+  importBasePath = importPath
 }
