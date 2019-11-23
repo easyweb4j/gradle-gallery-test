@@ -2,4 +2,4 @@ plugins {
   id 'java'
 }
 
-apply from: '../../gradle-gallery/basic-java.gradle'
+apply from: rootProject.ext.importBasePath + '/basic-java.gradle'
