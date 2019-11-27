@@ -1,0 +1,5 @@
+plugins {
+  id "org.springframework.boot" version "2.2.1.RELEASE"
+}
+
+apply from: rootProject.ext.importBasePath + '/easyweb4j.gradle'

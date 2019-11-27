@@ -10,3 +10,4 @@
 rootProject.name = 'gradle-gallery-test'
 include 'basic-java-demo'
 include 'mybatis-demo'
+include 'easyweb4j-demo'
